@@ -1,17 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="https://unpkg.com/three@0.115.0/build/three.js"></script>
+    <script src="https://unpkg.com/vanta@0.5.14/dist/vanta.net.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      #vanta-net {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+      }
+    </style>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
     </noscript>
+    <div id="vanta-net"></div>
     <div id="app"></div>
+    <script>
+      VANTA.NET({
+        el: "#vanta-net",
+        mouseControls: true,
+        touchControls: true,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        scale: 1.0,
+        scaleMobile: 1.0,
+        color: 0x6bd96b,
+        backgroundColor: 0xebebeb,
+        points: 7.0,
+        maxDistance: 24.0,
+        spacing: 17.0,
+      });
+    </script>
     <!-- built files will be auto injected -->
   </body>
 </html>
