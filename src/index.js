@@ -1,6 +1,8 @@
 import "./styles.css";
+import * as THREE from "three";
+import net from "vanta/dist/vanta.net.min";
 
-VANTA.NET({
+net({
   el: "#vanta-net",
   mouseControls: true,
   touchControls: true,
@@ -13,4 +15,5 @@ VANTA.NET({
   points: 7.0,
   maxDistance: 24.0,
   spacing: 17.0,
+  THREE,
 });
