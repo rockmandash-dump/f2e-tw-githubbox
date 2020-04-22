@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+}
+#vanta-net {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  mix-blend-mode: darken;
+}
+.logo {
+  width: 90%;
+  max-width: 600px;
+}
