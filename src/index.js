@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./style.css";
 import * as THREE from "three";
 import net from "vanta/dist/vanta.net.min";
 
